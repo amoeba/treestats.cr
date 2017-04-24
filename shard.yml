@@ -23,6 +23,9 @@ development_dependencies:
   icr:
     github: greyblake/crystal-icr
     branch: master
+  spec-kemal:
+    github: kemalcr/spec-kemal
+    branch: master
     
 crystal: 0.22.0
 

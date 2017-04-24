@@ -1,9 +1,11 @@
 require "./spec_helper"
 
-describe Treestats do
-  # TODO: Write tests
+describe "TreeStats" do
 
-  it "works" do
-    false.should eq(true)
+  # You can use get,post,put,patch,delete to call the corresponding route.
+  it "renders /" do
+    get "/"
+    response.body.should eq "Welcome to TreeStats!"
   end
+
 end

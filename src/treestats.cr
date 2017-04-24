@@ -11,9 +11,9 @@ db = client["test"]
 populations = db["populations"]
 characters = db["characters"]
 
-# module Treestats
-#   # TODO Put your code here
-# end
+module Treestats
+  # TODO Put your code here
+end
 
 post "/character" do |env|
   characters.insert({ "server" => "test2", "name" => "test"})

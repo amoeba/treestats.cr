@@ -2,10 +2,17 @@ require "./spec_helper"
 
 describe "TreeStats" do
 
-  # You can use get,post,put,patch,delete to call the corresponding route.
   it "renders /" do
     get "/"
+
+    response.status_code.should eq 200
     response.body.should eq "Welcome to TreeStats!"
+  end
+
+  it "can insert new characters" do
+    post "/character", body: "{ server: 'test', name: 'test'}"
+    
+
   end
 
 end

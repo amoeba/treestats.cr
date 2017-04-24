@@ -1,0 +1,29 @@
+name: treestats
+version: 0.1.0
+
+authors:
+  - Bryce Mecum <petridish@gmail.com>
+
+targets:
+  treestats:
+    main: src/treestats.cr
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+    branch: master
+  redis:
+    github: stefanwille/crystal-redis
+    version: ~> 1.8.0
+  mongo:
+    github: datanoise/mongo.cr
+    branch: master
+
+development_dependencies:
+  icr:
+    github: greyblake/crystal-icr
+    branch: master
+    
+crystal: 0.22.0
+
+license: MIT

@@ -2,19 +2,19 @@ version: 1.0
 shards:
   icr:
     github: greyblake/crystal-icr
-    commit: 898305c0787044ee5f8076d86e26ffe08c6c4e15
+    commit: 052ad808708b05b2408b0ff95b8585261ac1d49a
 
   kemal:
     github: kemalcr/kemal
-    commit: 0b4856b7417592743a27fc3e30867fd141395bf6
+    commit: 17bd3dce3724b092fd1151cad126f5973da00204
 
   kilt:
     github: jeromegn/kilt
-    version: 0.3.3
+    version: 0.4.0
 
   mongo:
     github: datanoise/mongo.cr
-    commit: 7fb5c78d71b2d02d5429a613d6d6554e2746df1c
+    commit: 30117a7c9d3eab81557ad0ae833f7109c4e6cabc
 
   radix:
     github: luislavena/radix
@@ -26,5 +26,5 @@ shards:
 
   spec-kemal:
     github: kemalcr/spec-kemal
-    commit: 05cc810f5f5ed890f16bcb06461000b97c625959
+    commit: 93ab608228ea6619d15555d1c77a3bcff29f1dba
 

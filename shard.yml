@@ -2,7 +2,7 @@ name: treestats
 version: 0.1.0
 
 authors:
-  - Bryce Mecum <petridish@gmail.com>
+  - Bryce Mecum <brycemecum@gmail.com>
 
 targets:
   treestats:

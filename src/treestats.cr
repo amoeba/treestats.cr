@@ -1,9 +1,5 @@
-# require "./treestats/*"
 require "kemal"
 require "mongo"
-require "redis"
-
-redis = Redis.new
 
 client = Mongo::Client.new "mongodb://127.0.0.1:27017/test"
 db = client["test"]

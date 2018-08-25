@@ -1,12 +1,16 @@
 version: 1.0
 shards:
+  exception_page:
+    github: crystal-loot/exception_page
+    version: 0.1.1
+
   icr:
     github: greyblake/crystal-icr
     commit: 052ad808708b05b2408b0ff95b8585261ac1d49a
 
   kemal:
     github: kemalcr/kemal
-    commit: 17bd3dce3724b092fd1151cad126f5973da00204
+    commit: 9448360eac4273919c2bb6d2517a7234844aec2f
 
   kilt:
     github: jeromegn/kilt
@@ -14,15 +18,11 @@ shards:
 
   mongo:
     github: datanoise/mongo.cr
-    commit: 30117a7c9d3eab81557ad0ae833f7109c4e6cabc
+    commit: 86c9e530c0ac980ed7b15e653746bc5b6f2527fc
 
   radix:
     github: luislavena/radix
     version: 0.3.8
-
-  redis:
-    github: stefanwille/crystal-redis
-    version: 1.8.0
 
   spec-kemal:
     github: kemalcr/spec-kemal

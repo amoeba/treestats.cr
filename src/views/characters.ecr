@@ -2,7 +2,7 @@
 
 <ul>
 <%- chars.each do |c| -%>
-<li>character...</li>
+  <li><a href='/characters/<%= c["server"] %>/<%= c["name"] %>'><%= c["server"] %>/<%= c["name"] %></a></li>
 <%- end -%>
 </ul>
 

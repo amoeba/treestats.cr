@@ -1,8 +1,8 @@
 <h1>servers</h1>
 
 <ul>
-    <%- servers.each do |s| -%>
-    <li>server...</li>
-    <%- end -%>
+<%- servers.each do |s| -%>
+    <li><a href='<%= s["name"] %>'></a><%= s["name"] %></li>
+<%- end -%>
 </ul>
 

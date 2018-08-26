@@ -13,8 +13,8 @@ dependencies:
     github: kemalcr/kemal
     branch: master
   mongo:
-    github: kalinon/mongo.cr
-    commit: b18940febb28cf2fb5ca4c0fd401bbf3c2094771
+    github: datanoise/mongo.cr
+    branch: master
 
 development_dependencies:
   icr:

@@ -1,0 +1,26 @@
+body {
+  font: 14px sans-serif;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 1.5em;
+}
+
+header a {
+  color: blue;
+  text-decoration: none;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+header ul li {
+  display: inline;
+  margin-right: 0.5em;
+}

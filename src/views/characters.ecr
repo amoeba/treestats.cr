@@ -1,8 +1,8 @@
-<h1>characters</h1>
+<h2>Characters</h2>
 
 <ul>
 <%- chars.each do |c| -%>
-  <li><a href='/characters/<%= c["server"] %>/<%= c["name"] %>'><%= c["server"] %>/<%= c["name"] %></a></li>
+  <li><%= c %></li>
 <%- end -%>
 </ul>
 

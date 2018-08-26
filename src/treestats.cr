@@ -5,33 +5,28 @@ client = Mongo::Client.new "mongodb://127.0.0.1:27017/treestats-dev"
 db = client["treestats-dev"]
 characters = db["characters"]
 
+r = Random.new
+
+# vals = (1..10).map { |i| (r.rand(57) + 65).unsafe_chr }
 module Treestats
   # TODO Put your code here
 end
 
 post "/character" do |env|
   # TODO: Implement create/update feature
-  characters.insert({ "server" => "Test", "name" => "Test"})
+  name = (1..15).map { |i| (r.rand(57) + 65).unsafe_chr.to_s }.join()
+  characters.insert({ "server" => "Test", "name" => name})
 end
 
 
 get "/" do
-  render "src/views/index.ecr"
+  render "src/views/index.ecr", "src/views/layout.ecr"
 end
 
 get "/characters" do
   chars = characters.find({} of String => String)
 
-  render "src/views/characters.ecr"
-end
-
-get "/character/:server/:name" do |env|
-  character = characters.find({
-    "server" => env.params.url["server"],
-    "name" => env.params.url["name"]
-  })
-
-  render "src/views/character.ecr"
+  render "src/views/characters.ecr", "src/views/layout.ecr"
 end
 
 get "/servers" do
@@ -44,13 +39,22 @@ get "/servers" do
 
   servers = characters.aggregate(pipeline)
 
-  render "src/views/servers.ecr"
+  render "src/views/servers.ecr", "src/views/layout.ecr"
 end
 
-get "/server/:server" do |env|
+get "/:server" do |env|
   server = env.params.url["server"]
 
-  render "src/views/server.ecr"
+  render "src/views/server.ecr", "src/views/layout.ecr"
+end
+
+get "/:server/:name" do |env|
+  character = characters.find({
+    "server" => env.params.url["server"],
+    "name" => env.params.url["name"]
+  })
+
+  render "src/views/character.ecr", "src/views/layout.ecr"
 end
 
 Kemal.run

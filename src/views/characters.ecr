@@ -3,11 +3,7 @@
 <ul>
 <%- chars.each do |c| -%>
   <li>
-    <ul>
-      <%- c.each_key do |k| -%>
-        <li><%= c[k] %></li>
-      <%- end -%>
-    </ul>
+    <a href='/<%= c["server"] %>/<%= c["name"] %>'>/<%= c["server"] %>/<%= c["name"] %></a>
   </li>
 <%- end -%>
 </ul>

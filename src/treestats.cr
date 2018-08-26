@@ -31,8 +31,8 @@ end
 
 get "/servers" do
   pipeline = [{
-    "$group" => { 
-      "_id" => "$server", 
+    "$group" => {
+      "_id" => "$server",
       "nchars" => { "$sum" => 1 }
     }
   }]
@@ -49,10 +49,10 @@ get "/:server" do |env|
 end
 
 get "/:server/:name" do |env|
-  character = characters.find({
+  char = characters.find({
     "server" => env.params.url["server"],
     "name" => env.params.url["name"]
-  })
+  }).first
 
   render "src/views/character.ecr", "src/views/layout.ecr"
 end

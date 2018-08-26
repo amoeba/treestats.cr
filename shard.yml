@@ -13,17 +13,14 @@ dependencies:
     github: kemalcr/kemal
     branch: master
   mongo:
-    github: datanoise/mongo.cr
-    branch: master
+    github: kalinon/mongo.cr
+    branch: update_for_0.25.0
 
 development_dependencies:
-  icr:
-    github: greyblake/crystal-icr
-    branch: master
   spec-kemal:
     github: kemalcr/spec-kemal
     branch: master
-    
+
 crystal: 0.24.1
 
 license: MIT

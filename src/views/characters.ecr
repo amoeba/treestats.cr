@@ -2,7 +2,12 @@
 
 <ul>
 <%- chars.each do |c| -%>
-  <li><%= c %></li>
+  <li>
+    <ul>
+      <%- c.each_key do |k| -%>
+        <li><%= c[k] %></li>
+      <%- end -%>
+    </ul>
+  </li>
 <%- end -%>
 </ul>
-

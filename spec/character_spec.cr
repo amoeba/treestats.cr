@@ -1,4 +1,4 @@
-require "spec"
+require "./spec_helper"
 
 describe Character do
   describe "#from_json" do

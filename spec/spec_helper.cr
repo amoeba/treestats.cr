@@ -1,4 +1,5 @@
 require "spec"
 require "spec-kemal"
-require "../src/treestats"
+# commented out so only unit tests run right now
+# require "../src/treestats"
 require "../src/models/character"

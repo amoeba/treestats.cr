@@ -4,6 +4,10 @@ shards:
     github: crystal-loot/exception_page
     version: 0.1.1
 
+  icr:
+    github: crystal-community/icr
+    commit: c7679f4471e0baf3e232b559c1880b28da27eba9
+
   kemal:
     github: kemalcr/kemal
     commit: 9448360eac4273919c2bb6d2517a7234844aec2f

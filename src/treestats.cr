@@ -1,5 +1,6 @@
 require "kemal"
 require "mongo"
+require "./models/character"
 
 client = Mongo::Client.new "mongodb://127.0.0.1:27017/treestats-dev"
 db = client["treestats-dev"]
@@ -13,11 +14,17 @@ module Treestats
 end
 
 post "/character" do |env|
-  # TODO: Implement create/update feature
-  name = (1..15).map { |i| (r.rand(57) + 65).unsafe_chr.to_s }.join()
-  characters.insert({ "server" => "Test", "name" => name})
-end
+  response = nil
 
+  begin
+    character = Character.from_json env.request.body.not_nil!
+    response = character.to_json
+  rescue
+    response = "Exception (not implemented)"
+  end
+
+  response
+end
 
 get "/" do
   render "src/views/index.ecr", "src/views/layout.ecr"
